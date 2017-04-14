@@ -1,0 +1,23 @@
+#contact-info {
+	font-size: .8em;
+}
+
+.job {
+	background-color: #e9e5dc;
+	border:1px solid #fff;
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.small-text {
+	font-size: .8em;
+}
+
+.hover-email:hover {
+	color: #f54574;
+}
+
+li.featured {
+	text-transform: uppercase;
+}
