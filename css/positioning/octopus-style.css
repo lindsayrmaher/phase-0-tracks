@@ -1,0 +1,37 @@
+
+
+.image-container {
+	margin: auto;
+	width: 100%;
+
+}
+
+#topspace {
+	margin-top: 15%;
+}
+
+#ollieimage {
+	display: block;
+    margin: auto;
+    width: 210px;
+}
+
+
+
+#Hat-image {
+	display: block;
+	margin: auto;
+    width: 275px;
+	position: relative; 
+   bottom: 360px; 
+   /*left: 565px;*/
+}
+
+#Glasses {
+	display: block;
+	margin: auto;
+    width: 135px;
+	position: relative; 
+   bottom: 355px; 
+   /*left: 625px;*/
+ }
