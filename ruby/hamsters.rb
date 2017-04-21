@@ -25,10 +25,10 @@ puts "Is your hamster fit for adoption? (y/n)"
 adoption = gets.chomp
 
 	if adoption == 'y'
-	  	true
+	  	adoption = true
 		valid_input = true
 	elsif adoption == 'n'
-	  	false
+	  	adoption = false
 	  	valid_input = true
 	else 
 		valid_input = false
@@ -39,7 +39,15 @@ end
 #Ask user the estimated age of the hamster
 puts "How old do you think the hamster is?"
 estimated_age = gets.chomp
+estimated_age.to_i
 
 if estimated_age == ""
 	estimated_age = nil
 end
+
+puts "Name: #{hamster_name}"
+puts "Volume: #{hamster_volume}"
+puts "Color: #{fur_color}"
+puts "Up for adoption: #{adoption}"
+puts "Age: #{estimated_age}"
+puts "Thanks for visiting the Hamster Sanctuary!"
