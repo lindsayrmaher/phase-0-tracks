@@ -17,9 +17,24 @@ puts "What color is the hamsters fur?"
 fur_color = gets.chomp
 
 #Ask user whether hamster is fit for adoption
+valid_input = false
+
+until valid_input
 
 puts "Is your hamster fit for adoption? (y/n)"
 adoption = gets.chomp
+
+	if adoption == 'y'
+	  	true
+		valid_input = true
+	elsif adoption == 'n'
+	  	false
+	  	valid_input = true
+	else 
+		valid_input = false
+		puts "Please answer y or n :)"
+	end
+end
 
 #Ask user the estimated age of the hamster
 puts "How old do you think the hamster is?"
