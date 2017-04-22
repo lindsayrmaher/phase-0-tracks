@@ -1,0 +1,60 @@
+- Determine what floor of the building you are going to
+	- if you are going to a floor with a number higher than your current location
+		- press the button with the arrow pointing up
+	- otherwise, if you are going to a floor with a number lower than your current location
+		-press the button with the arrow pointing down
+
+- Wait for the doors of the elevator to open
+
+- Move inside the elevator 
+
+- Turn to face the side with the doors and panel of buttons
+
+- Look through the panel of buttons until you find the floor you are going to 
+	- scan the top row of buttons from left to right
+		- if you do not see the floor you need to travel to
+			- continue scanning the following rows 
+		- if you do see your floor
+			- stop scanning
+
+- Press the button displaying your floor number
+
+- Wait for the doors to close
+
+- Wait for the doors to open again
+	-if they open at a floor that is not yours
+		- stay in the elevator
+		- make space for others if they are getting in the elevator
+	- otherwise, if it is the floor you need to go to, move out of the elevator
+
+- You've reached your destination!
+
+Brushing Your Teeth
+
+You're teeth are grimy, you should brush your teeth
+	- Find your toothbrush and toothpaste
+	- Turn on the cold water side of the faucet
+	- Run the toothbrush bristles under the water
+	- Turn off the cold water side of the faucet
+	- Open the toothpaste tube
+	-Check to see if the toothpaste is at the top of the tube
+		-if the toothpaste is stuck at the bottom of the tube
+			roll the bottom of the tube up until the toothpaste gets to the top
+		- otherwise you can leave the toothpaste tube as is
+	- Squeeze a drop of toothpaste onto the toothbrush bristles
+	- Until you've brushed your teeth for two minutes:
+		- brush your top and bottom teeth
+		- brush the front and back of your teeth
+		- spit out any excuse foam or spit
+		- brush your tongue 
+	- Spit out your foamy, spitty goodness
+	- Turn on the cold water faucet again
+	- Rinse off the toothbrush bristles
+	- Take a drink of the water
+	- Swish it in your mouth
+	- Spit once more
+	- Turn off the cold water faucet
+	- Put away your toothbrush and toothpaste
+Congrats, you're teeth are sparkling clean!
+
+
