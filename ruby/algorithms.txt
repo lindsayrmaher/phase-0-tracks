@@ -1,0 +1,30 @@
+- Determine what floor of the building you are going to
+	- if you are going to a floor with a number higher than your current location
+		- press the button with the arrow pointing up
+	- otherwise, if you are going to a floor with a number lower than your current location
+		-press the button with the arrow pointing down
+
+- Wait for the doors of the elevator to open
+
+- Move inside the elevator 
+
+- Turn to face the side with the doors and panel of buttons
+
+- Look through the panel of buttons until you find the floor you are going to 
+	- scan the top row of buttons from left to right
+		- if you do not see the floor you need to travel to
+			- continue scanning the following rows 
+		- if you do see your floor
+			- stop scanning
+
+- Press the button displaying your floor number
+
+- Wait for the doors to close
+
+- Wait for the doors to open again
+	-if they open at a floor that is not yours
+		- stay in the elevator
+		- make space for others if they are getting in the elevator
+	- otherwise, if it is the floor you need to go to, move out of the elevator
+
+- You've reached your destination!
