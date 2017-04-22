@@ -28,3 +28,33 @@
 	- otherwise, if it is the floor you need to go to, move out of the elevator
 
 - You've reached your destination!
+
+Brushing Your Teeth
+
+You're teeth are grimy, you should brush your teeth
+	- Find your toothbrush and toothpaste
+	- Turn on the cold water side of the faucet
+	- Run the toothbrush bristles under the water
+	- Turn off the cold water side of the faucet
+	- Open the toothpaste tube
+	-Check to see if the toothpaste is at the top of the tube
+		-if the toothpaste is stuck at the bottom of the tube
+			roll the bottom of the tube up until the toothpaste gets to the top
+		- otherwise you can leave the toothpaste tube as is
+	- Squeeze a drop of toothpaste onto the toothbrush bristles
+	- Until you've brushed your teeth for two minutes:
+		- brush your top and bottom teeth
+		- brush the front and back of your teeth
+		- spit out any excuse foam or spit
+		- brush your tongue 
+	- Spit out your foamy, spitty goodness
+	- Turn on the cold water faucet again
+	- Rinse off the toothbrush bristles
+	- Take a drink of the water
+	- Swish it in your mouth
+	- Spit once more
+	- Turn off the cold water faucet
+	- Put away your toothbrush and toothpaste
+Congrats, you're teeth are sparkling clean!
+
+
