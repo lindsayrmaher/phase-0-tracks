@@ -57,9 +57,13 @@ until employee_number == 0 do
 		puts "Let us know of any allergies you may have! Please type 'done' when finished."
 		applicant_allergy = gets.chomp
 		if applicant_allergy == "sunshine" then
-			puts "Probably a vampire."
 			break
 		end
+	end
+
+	case
+		when applicant_allergy == "sunshine"
+			puts "Probably a vampire."
 	end
 
 	case 
@@ -76,3 +80,5 @@ until employee_number == 0 do
 		
 	end
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
