@@ -21,33 +21,33 @@ until employee_number == 0 do
 	puts "Awesome, so what year were you born?"
 	applicant_birth_year = gets.chomp
 
-	if (2017 - applicant_birth_year.to_i) == applicant_age.to_i
-		applicant_real_age = true
-	else 
-		applicant_real_age = false
-	end
+		if (2017 - applicant_birth_year.to_i) == applicant_age.to_i
+			applicant_real_age = true
+		else 
+			applicant_real_age = false
+		end
 
 	#Ask whether they'd like garlic bread
 
 	puts "Our cafeteria serves garlic bread, should we order you some? (yes/no)"
 	garlicbread_preference = gets.chomp
 
-	if garlicbread_preference == "yes"
-		garlicbread_preference = true
-	else
-		garlicbread_preference = false
-	end
+		if garlicbread_preference == "yes"
+			garlicbread_preference = true
+		else
+			garlicbread_preference = false
+		end
 
 	#Health insurance?
 
 	puts "Would you like to enroll in the company’s health insurance?"
 	health_insurance = gets.chomp
 
-	if health_insurance == "yes"
-		health_insurance = true
-	else
-		health_insurance = false
-	end
+		if health_insurance == "yes"
+			health_insurance = true
+		else
+			health_insurance = false
+		end
 
 	#Do they have allergies? release 4
 
