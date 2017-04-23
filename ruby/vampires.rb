@@ -49,6 +49,19 @@ until employee_number == 0 do
 		health_insurance = false
 	end
 
+	#Do they have allergies? release 4
+
+	applicant_allergy = ""
+
+	while applicant_allergy != "done"
+		puts "Let us know of any allergies you may have! Please type 'done' when finished."
+		applicant_allergy = gets.chomp
+		if applicant_allergy == "sunshine" then
+			puts "Probably a vampire."
+			break
+		end
+	end
+
 	case 
 		when applicant_real_age = true && (garlicbread_preference = true || health_insurance = true)
 			puts "Probably not a vampire."
