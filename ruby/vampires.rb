@@ -62,31 +62,18 @@ until employee_number == 0 do
 	end
 
 	case 
-		when applicant_real_age == true && 
-			if garlicbread_preference == true || health_insurance == true
-				puts "Probably not a vampire."
-			elsif applicant_name == "Drake Cula" || applicant_name == "Tu Fang"
-				puts "Definitely a vampire."
-			elsif applicant_allergy == "sunshine" 
-				puts "Probably a vampire."
-			else
-			puts "Results inconclusive"
-			end
-				
-		#when applicant_allergy == "sunshine"
-			#puts "Probably a vampire."
-		#when applicant_name == "Drake Cula" || applicant_name == "Tu Fang"
-			#puts "Definitely a vampire."
-		when applicant_real_age == false && 
-			if garlicbread_preference == false || health_insurance == false
-				puts "Probably a vampire."
-			elsif garlicbread_preference == false && health_insurance == false
-				puts "Almost certainly a vampire."
-			else
-				puts "Results inconclusive"
-			end
-		else
-				puts "Results inconclusive"
+		when applicant_allergy == "sunshine"
+  			puts "Probably a vampire."
+		when applicant_name == "Drake Cula" || applicant_name == "Tu Fang"
+  			puts "Definitely a vampire."
+		when (applicant_real_age == false) && (garlicbread_preference == false) && (health_insurance == false)
+			puts "Almost certainly a vampire."
+ 		when applicant_real_age == false && (garlicbread_preference == false || health_insurance == false)
+ 			puts "Probably a vampire."
+ 		when applicant_real_age == true && (garlicbread_preference == true || health_insurance == true)
+ 			puts "Probably not a vampire."
+  		else
+  			puts "Results inconclusive"
 	end
 end
 
