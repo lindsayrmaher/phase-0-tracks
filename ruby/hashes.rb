@@ -35,7 +35,7 @@ designer_response[:decor_theme] = gets.chomp
 
 puts "Do you have expensive taste? (y/n)"
 designer_response[:taste] = gets.chomp
-	if designer_response[:taste] == "y" or designer_response[:taste]
+	if designer_response[:taste] == "y" or designer_response[:taste] == "yes"
 		designer_response[:taste] = true
 	else
 		designer_response[:taste] = false
@@ -62,7 +62,7 @@ puts designer_response.values
 #ask them to either say "none" if they are done, or say which field name they need to update
 
 puts "Before you submit, are there any fields you need to update?"
-puts "If not, go ahead and say 'none', if yes please type the field you want to update"
+puts "If not, go ahead and say 'none', if yes please type the field you want to update (client_name, client_age, decor_theme, taste, project_length)"
 
 updated_field = gets.chomp
 
