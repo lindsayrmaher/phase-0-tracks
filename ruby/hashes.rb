@@ -63,11 +63,27 @@ puts designer_response.values
 
 puts "Before you submit, are there any fields you need to update?"
 puts "If not, go ahead and say 'none', if yes please type the field you want to update"
+
+updated_field = gets.chomp
+
 #set their response equal to their previous response changed to a symbol
+
+if updated_field == "none"
+	puts "Great, you should be all set!"
+else 
+	puts "What should the updated response be?"
+	designer_response[updated_field.to_sym] = gets.chomp
+end
 
 #print the new set of values in the hash to make sure they key has been updated
 
+puts designer_response.values
+
 #print a thank you for filling out the form!
+
+puts "thanks for your submission, we will get back to you soon!"
+
+
 
 
 
