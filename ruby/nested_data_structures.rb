@@ -10,7 +10,7 @@ el_train_system = {
 		number_of_cars: 8,
 		direction_of_travel: ['north', 'south']
 
-	}
+	},
 	blue_line: {
 		busy_times: ["8am", "5pm", "9pm"],
 		stop_number: 15,
@@ -23,7 +23,7 @@ el_train_system = {
 		direction_of_travel: ['north', 'west', 'northwest'],
 		airport: "OHare"
 
-	}
+	},
 	brown_line: {
 		busy_times: 'rush hour',
 		stop_number: 12,
@@ -35,7 +35,7 @@ el_train_system = {
 		number_of_cars: 6,
 		direction_of_travel: ['north', 'west', 'around loop']
 
-	}
+	},
 	purple_line: {
 		busy_times: ['rush hour', 'cubs games'],
 		stop_number: 14,
@@ -47,9 +47,9 @@ el_train_system = {
 		number_of_cars: 6,
 		direction_of_travel: ['north', 'west', 'around loop']
 
-	}
+	},
 	pink_line: {
-		busy_times: ['rush hour', 'events in pilsen']
+		busy_times: ['rush hour', 'events in pilsen'],
 		stop_number: 16,
 		rider_type: {
 			commuters: ['programmers', 'nannies', 'account managers', 'advertising gurus'],
@@ -59,7 +59,7 @@ el_train_system = {
 		number_of_cars: 6,
 		direction_of_travel: ['west', 'around loop']
 
-	}
+	},
 	orange_line: {
 		busy_times: ['rush hour', 'big travel days'],
 		stop_number: 12,
@@ -72,7 +72,7 @@ el_train_system = {
 		direction_of_travel: ['southwest', 'around loop'],
 		airport: "Midway"
 
-	}
+	},
 	green_line: {
 		busy_times: ['rush hour', 'game days', 'summer events in west loop'],
 		stop_number: 17,
@@ -84,7 +84,7 @@ el_train_system = {
 		number_of_cars: 6,
 		direction_of_travel: ['southwest', 'around loop', 'west']
 
-	}
+	},
 	yellow_line: {
 		busy_times: ['rush hour'],
 		stop_number: 7,
@@ -100,3 +100,19 @@ el_train_system = {
 }
 
 puts el_train_system[:red_line][:rider_type][:commuters][1]
+
+puts el_train_system[:green_line][:rider_type][:other].reverse
+
+puts el_train_system[:orange_line][:airport]
+
+el_train_system[:purple_line][:rider_type][:other].push ('Northwestern Students')
+
+puts el_train_system[:purple_line][:rider_type][:other]
+
+
+
+
+
+
+
+
