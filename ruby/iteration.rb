@@ -34,3 +34,98 @@ age_of_robots.map! do |age|
 end
 
 p age_of_robots
+
+#release two
+
+#part one
+age_of_robots.delete_if {
+	|age| age > 30
+}
+
+
+robot_features.delete_if {
+	|feature, number| number > 30
+}
+
+#part two
+
+puts robot_features
+
+age_of_robots.keep_if {
+	|age| age <= 26
+}
+
+puts age_of_robots
+
+robot_features.keep_if {
+	|feature, number| feature == :legs or feature == :arms
+}
+
+puts robot_features
+
+#part three
+
+odd_age_of_robots = age_of_robots.select {
+	|age| age.even?
+}
+
+puts odd_age_of_robots
+
+robot_features[:processors] = 8
+robot_features[:pockets] = 100
+
+best_robot_features = robot_features.select {
+	|feature, number| number > 50 
+}
+
+puts best_robot_features
+
+#part four 
+
+new_age_of_robots = age_of_robots.drop_while {
+	|age| age < 10
+}
+
+puts new_age_of_robots
+
+robot_features.reject! {
+	|feature, number| number < 10 
+}
+
+puts robot_features
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
