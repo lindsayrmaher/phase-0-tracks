@@ -1,16 +1,19 @@
 #Create a Alias Generator
 
 #Input Real Name as string
-
-real_name = "Lindsay Maher"
-
 #make all letters of string lowercase
-
 #Convert the string to an array
+#split by white space
+
+real_name = "Lindsay Maher".downcase.split(' ')
+
+p real_name
 
 #Reverse the order of the array inputs
 
-#split by white space
+real_name.reverse!
+
+p real_name
 
 #Iterate through each word to find vowels & consonants
 #if it is a vowel, rotate/replace to/with the next vowel in the alphabet
