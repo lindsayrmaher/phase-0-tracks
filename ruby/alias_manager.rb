@@ -8,6 +8,8 @@ puts "Enter a name you'd like to create an alias for!"
 puts "you can create as many as you like, but input 'quit' when finished"
 input_name = gets.chomp
 
+aliases = []
+
 #create a loop that lets the user add as many names as they'd like
 
 until input_name == 'quit' or input_name == ''
@@ -17,13 +19,13 @@ until input_name == 'quit' or input_name == ''
 	#Convert the string to an array
 	#split by white space
 
-	real_name = input_name.downcase.split(' ')
+	fake_name = input_name.downcase.split(' ')
 
 	#expected outcome ["lindsay", "maher"]
 
 	#Reverse the order of the array inputs
 
-	real_name.reverse!
+	fake_name.reverse!
 
 	#expected outcome ["maher", "lindsay"]
 
@@ -35,17 +37,30 @@ until input_name == 'quit' or input_name == ''
 
 	#capitalize the first letter of each word
 
-	real_name.map! {|word|
+	fake_name.map! {|word|
 		vowel_check = word.tr('aeiou', 'eioua')
 		vowel_check.tr('bcdfghjklmnpqrstvwxyz', 'cdfghjklmnpqrstvwxyzb').capitalize
 
 
 	}
 
-	p real_name.join(" ")
+	#adding values to the hashes within the array
+
+	aliases.push({
+		name: input_name,
+		alias: fake_name.join(" ")
+	})
+
 
 	puts "Enter a name you'd like to create an alias for!"
 	puts "you can create as many as you like, but input 'quit' when finished"
 	input_name = gets.chomp
 
 end
+
+#print the values from the data structure
+
+aliases.each do |pair|
+	puts "#{pair[:name]} is really #{pair[:alias]}!"
+end
+
