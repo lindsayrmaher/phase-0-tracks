@@ -19,16 +19,15 @@ def search_party(input_array, input)
 index = 0
 
   while index < input_array.length
-      if input_array[index] == input
-        index
-      else
-        nil
-      end
+    if input_array[index] == input
+      return index
+      #added return so that the index value would be printed when the method is run
+    end
     index += 1
   end
 end
 
-p search_party(sample_array, 37)
+p search_party(sample_array, 56)
 
 #release 1
 
@@ -39,28 +38,31 @@ p search_party(sample_array, 37)
 
 #define method
 
-def fibonacci(n)
-  return  n  if n <= 1 
-    fibonacci( n - 1 ) + fibonacci( n - 2 )
-  end 
+# def fibonacci(n)
+#   puts "Calculating Fib of #{n}"
+#   return  n  if n <= 1 
+#     fibonacci( n - 1 ) + fibonacci( n - 2 )
+#   end 
 
-puts fibonacci(5)
+# puts fibonacci(5)
 
 def fib_sequence(n)
 
-  range = 0..n.to_a
+  fibonacci_array = [0, 1]
+  
+  while n > fibonacci_array.length do 
+    fibonacci_array << fibonacci_array[-1] + fibonacci_array[-2]
+    #when calling fibonacci method inside this method, it was breaking with larger numbers
+    #rather than creating each number and having to run through the entire array each time to create a number
+    #this way we only have to call the last two numbers and add them until we reach the desired length of array
 
-    while n > fibonacci_array.length do 
+  end
 
-      fibonacci(n)
-
-      fibonacci_array << fibonacci(n)
-
-    end
-
- p fibonacci_array
+  return fibonacci_array
+  #same as the search party method, i needed to return the array so that when i run the fib_sequence method i get an explicit return. 
+  #just putting the new number into the array doesn't require an explicit return
 
 end
 
 
-fib_sequence(5)
+p fib_sequence(100)
