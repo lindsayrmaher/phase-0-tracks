@@ -5,7 +5,7 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 
 # 1. Iterate through the zombie_apocalypse_supplies array,
 # printing each item in the array separated by an asterisk
-# zombie_apocalypse_supplies.each { |x| 
+zombie_apocalypse_supplies.each { |x| 
 	
 	print x, " * " 
 }
