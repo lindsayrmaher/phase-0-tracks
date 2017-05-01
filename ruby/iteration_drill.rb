@@ -14,10 +14,42 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 # in alphabetical order. Do not use any special built-in methods.
 # look at first letter of each word, if 
 
-zombie_apocalypse_supplies.each do |word|
+# def insertion_sort(input_array)
+# 	final_array = [input_array[0]]
 
+# 	for new_value in input_array
 
-end
+# 		p "Checking #{new_value}"
+
+# 		for existing_value in final_array
+# 			# p "Comparing #{new_value} to #{existing_value} (#{new_value <=> existing_value})"
+# 			# Check if new_value should be inserted before existing_value.
+# 			# IF yes, insert.
+# 			# If no, proceed to next item.
+
+# 			if (new_value.downcase <=> existing_value.downcase) == -1
+				
+# 				if final_array.index(existing_value) > 0
+# 					# p "Inserting #{new_value} before #{existing_value} at index #{final_array.index(existing_value)}"
+# 					final_array.insert(final_array.index(existing_value), new_value)
+# 				else
+# 					# p "Inserting #{new_value} before #{existing_value} at zero index"
+# 					final_array.insert(0, new_value)
+# 				end
+				
+# 				break
+# 			elsif final_array[-1] == existing_value
+# 				# p "At end, pushing #{new_value}"
+# 				final_array.push(new_value)
+# 				break
+# 			end
+# 		end
+# 	end
+
+# 	return final_array.uniq
+# end
+
+# p insertion_sort(zombie_apocalypse_supplies)
 
 # # 3. Create a method to see if a particular item (string) is in the
 # # zombie_apocalypse_supplies. Do not use any special built-in methods.
@@ -35,23 +67,16 @@ end
 # 4. You can't carry too many things, you've only got room in your pack for 5.
 # Remove items in your zombie_apocalypse_supplies in any way you'd like,
 # leaving only 5. Do not use any special built-in methods.
-def remove_item(n)
+# def remove_item(n)
+# 	zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
+#                               "shotgun", "compass", "CB radio", "batteries"]
 
-	zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
-                              "shotgun", "compass", "CB radio", "batteries"]
-
-	while zombie_apocalypse_supplies.length == 8
-		
-		zombie_apocalypse_supplies[0] = ''
-		zombie_apocalypse_supplies[1] = ''
-		# zombie_apocalypse_supplies.length -= 1
-		p "#{zombie_apocalypse_supplies[0]} and #{zombie_apocalypse_supplies[1]}"
-		p zombie_apocalypse_supplies
-	end
-	return zombie_apocalypse_supplies
+# 	zombie_apocalypse_supplies = zombie_apocalypse_supplies[0..n]
+	
+# 	return zombie_apocalypse_supplies
 # end
 
-remove_item(5)
+# p remove_item(4)
 
 # # 5. You found another survivor! This means you can combine your supplies.
 # # Create a new combined supplies list out of your zombie_apocalypse_supplies
