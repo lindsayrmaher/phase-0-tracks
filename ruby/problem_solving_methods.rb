@@ -61,7 +61,8 @@ p fib_sequence(100)
 
 #release 2
 
-# Pseudocode a sorting method that takes an array of integers and uses a sorting algorithm, and returns a sorted version of the array. ** Not Ruby-specific.
+# Pseudocode a sorting method that takes an array of integers and uses a sorting algorithm, and returns a sorted version of the array. 
+#** Not Ruby-specific.
 
 # INSERTION SORT
 
@@ -77,8 +78,10 @@ p fib_sequence(100)
 
 
 def insertion_sort(input_array)
-  final_array = [input_array[0]] # puts the first value in input_array into final_array so we have something to compare the rest of the values to
-  input_array.delete_at(0)  # deletes input_array[0] from input_array (so it's cutting and pasting instead of copy and pasting)
+  final_array = [input_array[0]] 
+  # puts the first value in input_array into final_array so we have something to compare the rest of the values to
+  input_array.delete_at(0) 
+  # deletes input_array[0] from input_array (so it's cutting and pasting instead of copy and pasting)
 
   for value in input_array
     final_index = 0
