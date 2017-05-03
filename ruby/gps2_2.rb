@@ -33,15 +33,31 @@ def add_item(list_hash, item, quantity)
 		list_hash[item] = quantity
 	end
 # input: list, item name, and optional quantity
-# steps:
+# steps: added condition to account for IF the item already exists as a key, update it's quantity. 
+		#IF it's a new item, create a new key, value pair
+		#print the update grocery list
 # output: the hash is updated the key and value we just created
+
+p list_hash
 end
+
+# add_item(grocery_hash, "guacamole", 3)
 
 
 # Method to remove an item from the list
-# input:
-# steps:
-# output:
+# input: list, item name index. 
+
+def remove_item(list_hash, item)
+	list_hash.delete_if {|key, value| key == item }
+
+	p list_hash
+end
+
+# remove_item(grocery_hash, "carrots")
+
+# steps: check if item is in the list
+#if it matches one key, delete that index of the hash
+# output: the updated hash with item removed
 
 # Method to update the quantity of an item
 # input:
