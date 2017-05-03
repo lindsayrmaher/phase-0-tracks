@@ -60,9 +60,18 @@ end
 # output: the updated hash with item removed
 
 # Method to update the quantity of an item
-# input:
-# steps:
-# output:
+# input: key name, quantity
+def update_quantity_number(list_hash, item, new_quantity)
+	if new_quantity >= 0 
+		list_hash[item] = new_quantity
+	end
+	p list_hash
+end
+
+update_quantity_number(grocery_hash, "pizza", 0)
+# steps: check IF new quantity is greater than 0, then the existing quantity will update to add in new quantity
+#otherwise stay the same
+# output: if there is a change, we will print the hash with update quantities. otherwise return/print nothing 
 
 # Method to print a list and make it look pretty
 # input:
