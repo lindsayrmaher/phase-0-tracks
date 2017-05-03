@@ -1,5 +1,9 @@
 class Puppy
 
+	def initialize
+		puts "Initializing new puppies!"
+	end
+
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
@@ -23,6 +27,8 @@ class Puppy
   	puts "We're shaking hands!!!!!"
   end
 
+
+
 end
 
 Ollie = Puppy.new
@@ -36,3 +42,5 @@ Ollie.roll_over
 puts Ollie.dog_years(3)
 
 Ollie.shake_hands
+
+Ruby = Puppy.new
