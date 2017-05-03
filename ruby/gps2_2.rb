@@ -98,3 +98,30 @@ print_list(grocery_hash)
 # input: the hash
 # steps: takes the key and value and prints each of them separately
 # output: listed items printed out one by one
+
+#Reflection
+# What did you learn about pseudocode from working on this challenge?
+#I definitely learned that adding good pseudocode can be really helpful when you're stuck on how to go about writing a method.
+#I've noticed reviewing other peoples code how helpful it is to include as well so you can follow very clearly what's happening.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# using a hash for this challenge definitely seemed much more adventageous so that we could easily update each list item and assign it a quantity.
+# I feel like using an array here would be very confusing.
+
+# What does a method return?
+#A method doesn't necessarily explicitly return anything unless you outline that. 
+#But it is going to implicitly return whatever it is you told it to do with the method.
+
+# What kind of things can you pass into methods as arguments?
+#You can pass conditional statements, strings to print, other methods, built in methods, loops, etc
+# How can you pass information between methods?
+#At least in this challenge, we passes information between methods by assigning some methods to a variable we could repeat throughout the other methods
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+#I am actually feel a lot better about methods and using blocks with built in methods. I still struggle a bit with following what a block parameter is referencing
+#but I think the challenge solidified the concept that anything you put into a method needs to be interchangable rather that strictly defined so that it's repeatable with different inputs
+
+
+
+
+
+
