@@ -24,6 +24,35 @@ class Santa
 
   	end
 
+  	def celebrate_birthday
+  		@age = @age + 1
+  	end
+
+  	# def get_mad_at(reindeer_name)
+
+  	# 	@reindeer_ranking.each do 
+
+  	# 		if reindeer_name == @reindeer_ranking[index]
+  	# 			@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at())
+  	# 	end
+  	# end
+
+  	def gender
+  		@gender
+  	end
+
+  	def gender=(updated_gender)
+  		@gender = updated_gender
+  	end
+
+  	def age
+  		@age
+  	end
+
+  	def ethnicity
+  		@ethnicity
+  	end
+
 
 end
 
@@ -33,7 +62,7 @@ end
 
 # santa_one.eat_milk_and_cookies("snickerdoodle")
 
-santa_crew = []
+# santa_crew = []
 
 # example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 # example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
@@ -41,6 +70,15 @@ santa_crew = []
 #   santa_crew << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 
-santa_crew << Santa.new("female", "Korean")
-santa_crew << Santa.new("male", "Jewish")
-santa_crew << Santa.new("transgender", "Australian")
+# santa_crew << Santa.new("female", "Korean")
+# santa_crew << Santa.new("male", "Jewish")
+# santa_crew << Santa.new("transgender", "Australian")
+
+
+santa_four = Santa.new("gender fluid", "Japanese-African")
+puts "The santa's age is #{santa_four.age}"
+santa_four.celebrate_birthday
+puts "This santa is now #{santa_four.age}!"
+santa_four.gender = "nothing"
+puts "santa's gender is now #{santa_four.gender}"
+
