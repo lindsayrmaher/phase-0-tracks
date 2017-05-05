@@ -1,4 +1,6 @@
 class Santa
+	attr_accessor :gender
+	attr_reader :age, :ethnicity
 
 	def initialize(gender, ethnicity)
 
@@ -28,29 +30,16 @@ class Santa
   		@age = @age + 1
   	end
 
-  	# def get_mad_at(reindeer_name)
-
-  	# 	@reindeer_ranking.each do 
-
-  	# 		if reindeer_name == @reindeer_ranking[index]
-  	# 			@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at())
-  	# 	end
-  	# end
-
-  	def gender
-  		@gender
-  	end
-
-  	def gender=(updated_gender)
-  		@gender = updated_gender
-  	end
-
-  	def age
-  		@age
-  	end
-
-  	def ethnicity
-  		@ethnicity
+  	def get_mad_at(reindeer_name)
+  		# p @reindeer_ranking
+  		index = 0
+  		while index < @reindeer_ranking.length do 
+			if reindeer_name == @reindeer_ranking[index]
+  				@reindeer_ranking.insert(-1, @reindeer_ranking.delete_at(index))
+  			end
+  		index +=1
+  		end
+  		p @reindeer_ranking
   	end
 
 
@@ -81,4 +70,5 @@ santa_four.celebrate_birthday
 puts "This santa is now #{santa_four.age}!"
 santa_four.gender = "nothing"
 puts "santa's gender is now #{santa_four.gender}"
+santa_four.get_mad_at("Rudolph")
 
