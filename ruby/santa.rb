@@ -57,17 +57,20 @@ def create_instance(number_of_instances)
 	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 	example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
+	santa_crew = []
 	number_of_instances.times do 
-		number_of_instances.to_s = Santa.new(example_genders.sample, example_ethnicities.sample)
+		new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+		santa_crew << new_santa
 		
 		updated_age = Random.new
 		new_santa.age = updated_age.rand(0..140)
-		p new_santa.age
+		puts "Age: #{new_santa.age}"
 
 	end
+	santa_crew
 end
 
-create_instance(50)
+create_instance(500)
 
 # new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
 
