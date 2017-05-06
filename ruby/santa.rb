@@ -1,6 +1,6 @@
 class Santa
-	attr_accessor :gender
-	attr_reader :age, :ethnicity
+	attr_accessor :gender, :age
+	attr_reader :ethnicity
 
 	def initialize(gender, ethnicity)
 
@@ -45,24 +45,21 @@ class Santa
 
 end
 
-# santa_one = Santa.new("female", "Korean")
+santa_one = Santa.new("female", "Korean")
 
-# santa_one.speak
+santa_one.speak
 
-# santa_one.eat_milk_and_cookies("snickerdoodle")
+santa_one.eat_milk_and_cookies("snickerdoodle")
 
-# santa_crew = []
 
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santa_crew << Santa.new(example_genders[i], example_ethnicities[i])
-# end
+#Adding & defining attributes on initialize method
+santas = []
 
-# santa_crew << Santa.new("female", "Korean")
-# santa_crew << Santa.new("male", "Jewish")
-# santa_crew << Santa.new("transgender", "Australian")
+santas << Santa.new("female", "Korean")
+santas << Santa.new("male", "Jewish")
+santas << Santa.new("transgender", "Australian")
 
+#testing out attr & getter/setter 
 
 santa_four = Santa.new("gender fluid", "Japanese-African")
 puts "The santa's age is #{santa_four.age}"
@@ -71,4 +68,36 @@ puts "This santa is now #{santa_four.age}!"
 santa_four.gender = "nothing"
 puts "santa's gender is now #{santa_four.gender}"
 santa_four.get_mad_at("Rudolph")
+
+#testing out pieces of santa instance method
+
+# new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+
+# updated_age = Random.new
+# new_santa.age = updated_age.rand(0..140)
+
+# p new_santa.age
+
+#create many many santas
+
+def create_instance(number_of_instances)
+	example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+	example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+
+	santa_crew = []
+	number_of_instances.times do 
+		new_santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+		santa_crew << new_santa
+		
+		updated_age = Random.new
+		new_santa.age = updated_age.rand(0..140)
+		puts "Age: #{new_santa.age}"
+
+	end
+	santa_crew
+end
+
+create_instance(10)
+
+
 
