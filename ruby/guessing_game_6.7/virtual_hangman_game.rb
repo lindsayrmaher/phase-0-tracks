@@ -9,22 +9,22 @@ class Guessing_Game
 	# needs to have an empty “incorrect guessed letters” array that is writable (look at reindeer example)
 	# needs to have is over attribute (similar to cup game) just readable
 
-	attr_accessor :word_submit
+	attr_accessor :real_word, :disguised_word
 	attr_reader :is_over, :guess_count
 
 	def initialize
 
-		@word_submit = word_submit
+		@real_word = real_word
+		@disguised_word = disguised_word
 		@guess_count = 0
 		@guessed_letters = []
-		@is_over = false
 	end
 	
 # Create a method that will take the word_submit and display it as a string of “_” vs the word 
 # - (create new variable same length of original guess)
 
 	def disguise_word(inputed_word)
-		disguised_word = inputed_word.gsub(/./, '_')
+		@disguised_word = inputed_word.gsub(/./, '_')
 		return disguised_word
 	end
 
@@ -33,11 +33,29 @@ class Guessing_Game
 #push that letter to the guesses array
 # OTHERWISE push the letter to guesses array
 
+	def detect_letter(letter_guess)
+		if @guessed_letters.include? letter_guess
+			return disguised_word
+		end
+
+		@guess_count += 1  
+		@guessed_letters.push(letter_guess)
+		if real_word.include? letter_guess
+			
+			# Loop through i from 0 to length of the word
+			# to find all occurances of letter_guess
+			for i in 0..real_word.length
+				if letter_guess == real_word[i]
+					disguised_word[i] = letter_guess
+				end
+			end	
+		end
+		return disguised_word
+	end
+
 # IF the guess is equal to any letters in the submitted word, 
 # then it should change the “_” at that index in new variable 
 # that matches the index in the original word to the guessed letter.
-
-# delete the guessed letter from the original word submitted. 
 
 # OTHERWISE it should not change and the guess should be pushed to the guesses array
 
@@ -47,19 +65,49 @@ class Guessing_Game
 
 end
 
-user_input = Guessing_Game.new
-p user_input.disguise_word("unicorn")
+#test driver code 
+# user_input = Guessing_Game.new
+# p user_input.real_word = "unicorn"
+# p user_input.disguise_word("unicorn")
+# p user_input.detect_letter("n")
+# p user_input.detect_letter('n')
 
 
 # user interface
 
 # Display a welcome message
+puts "Hello and welcome to virtual hangman!"
 # initialize game
+user_input = Guessing_Game.new
 # Ask player one for the word they want to submit
-# set their input equal to the word_submit and downcase all letters
+puts "Player One - Give us the word you'd like Player Two to guess."
+# set their input equal to the real_word and downcase all letters
+user_input.real_word = gets.chomp.downcase
+# p user_input.real_word
+puts "Ok Player Two, unlock the letters in the word below! You can guess more than once, but choose your guesses carefully.."
+p user_input.disguise_word(user_input.real_word)
 # run through their guesses WHILE the guess count is less than the length
+while user_input.guess_count < user_input.real_word.length do 
+	
+	puts "Make your guess!"
+	guess = gets.chomp
+	p user_input.detect_letter(guess)
+
+	if user_input.disguised_word == user_input.real_word
+		puts "Congrats, you’ve outsmarted your opponent!"
+		break
+	end
+
+end
+
+if user_input.disguised_word != user_input.real_word
+	puts "Too bad, you weren’t quick-witted enough this time around :("
+end
 # display the new guess string each time so player two can see if they have guessed correctly or not
 # At the end of their guesses, IF the original word_submit string is empty, then run a message 
 # make message “Congrats, you’ve outsmarted your opponent!”
 # OTHERWISE have it display a taunting message about them not being able to guess the word. 
 # make message “Too bad, you weren’t quick-witted enough this time around :(“
+
+
+

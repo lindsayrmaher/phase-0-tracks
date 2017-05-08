@@ -9,6 +9,10 @@ describe Guessing_Game do
 	 	expect(user_input.disguise_word("unicorn")).to start_with '__'
 	 end
 
+	 it "looks for a letter in the original word and returns the index if found" do
+	 	expect(user_input.detect_letter).to eq 1
+	 end
+
 
 	
 end
