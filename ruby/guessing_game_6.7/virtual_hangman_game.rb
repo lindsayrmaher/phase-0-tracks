@@ -35,6 +35,11 @@ class Guessing_Game
 # OTHERWISE push the letter to guesses array
 
 	def detect_letter(letter_guess)
+		if @guessed_letters.include? letter_guess
+			return disguised_word
+		end
+
+		@guess_count += 1  
 		@guessed_letters.push(letter_guess)
 		if real_word.include? letter_guess
 			
@@ -44,18 +49,14 @@ class Guessing_Game
 				if letter_guess == real_word[i]
 					disguised_word[i] = letter_guess
 				end
-			end
-			return disguised_word
-		else 
-			return disguised_word	
+			end	
 		end
+		return disguised_word
 	end
 
 # IF the guess is equal to any letters in the submitted word, 
 # then it should change the “_” at that index in new variable 
 # that matches the index in the original word to the guessed letter.
-
-# delete the guessed letter from the original word submitted. 
 
 # OTHERWISE it should not change and the guess should be pushed to the guesses array
 
@@ -69,6 +70,7 @@ user_input = Guessing_Game.new
 p user_input.real_word = "unicorn"
 p user_input.disguise_word("unicorn")
 p user_input.detect_letter("n")
+p user_input.detect_letter('n')
 
 
 # user interface
