@@ -9,12 +9,13 @@ class Guessing_Game
 	# needs to have an empty “incorrect guessed letters” array that is writable (look at reindeer example)
 	# needs to have is over attribute (similar to cup game) just readable
 
-	attr_accessor :word_submit
+	attr_accessor :real_word, :disguised_word
 	attr_reader :is_over, :guess_count
 
 	def initialize
 
-		@word_submit = word_submit
+		@real_word = real_word
+		@disguised_word = disguised_word
 		@guess_count = 0
 		@guessed_letters = []
 		@is_over = false
@@ -24,7 +25,7 @@ class Guessing_Game
 # - (create new variable same length of original guess)
 
 	def disguise_word(inputed_word)
-		disguised_word = inputed_word.gsub(/./, '_')
+		@disguised_word = inputed_word.gsub(/./, '_')
 		return disguised_word
 	end
 
@@ -32,6 +33,23 @@ class Guessing_Game
 # IF it is in the submitted word, return the index of that letter
 #push that letter to the guesses array
 # OTHERWISE push the letter to guesses array
+
+	def detect_letter(letter_guess)
+		@guessed_letters.push(letter_guess)
+		if real_word.include? letter_guess
+			
+			# Loop through i from 0 to length of the word
+			# to find all occurances of letter_guess
+			for i in 0..real_word.length
+				if letter_guess == real_word[i]
+					disguised_word[i] = letter_guess
+				end
+			end
+			return disguised_word
+		else 
+			return disguised_word	
+		end
+	end
 
 # IF the guess is equal to any letters in the submitted word, 
 # then it should change the “_” at that index in new variable 
@@ -48,15 +66,26 @@ class Guessing_Game
 end
 
 user_input = Guessing_Game.new
+p user_input.real_word = "unicorn"
 p user_input.disguise_word("unicorn")
+p user_input.detect_letter("n")
 
 
 # user interface
 
-# Display a welcome message
-# initialize game
-# Ask player one for the word they want to submit
-# set their input equal to the word_submit and downcase all letters
+# # Display a welcome message
+# puts "Hello and welcome to virtual hangman!"
+# # initialize game
+# user_input = Guessing_Game.new
+# # Ask player one for the word they want to submit
+# puts "Player One - Give us the word you'd like Player Two to guess."
+# # set their input equal to the word_submit and downcase all letters
+# user_input.real_word = gets.chomp.downcase
+#  p user_input.real_word
+
+
+# puts "Ok Player Two, it's your turn to guess! Can guess more than once, but choose your guesses carefully.."
+# p user_input.disguise_word(user_input.word_submit)
 # run through their guesses WHILE the guess count is less than the length
 # display the new guess string each time so player two can see if they have guessed correctly or not
 # At the end of their guesses, IF the original word_submit string is empty, then run a message 
