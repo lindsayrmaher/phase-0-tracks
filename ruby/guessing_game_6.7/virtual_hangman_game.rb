@@ -23,6 +23,11 @@ class Guessing_Game
 # Create a method that will take the word_submit and display it as a string of “_” vs the word 
 # - (create new variable same length of original guess)
 
+	def disguise_word(inputed_word)
+		disguised_word = inputed_word.gsub(/./, '_')
+		return disguised_word
+	end
+
 # Create a method that checks if the letter guess is in the submitted word. 
 # IF it is in the submitted word, return the index of that letter
 #push that letter to the guesses array
@@ -41,6 +46,9 @@ class Guessing_Game
 # OTHERWISE the guess count should increase by 1 every time a letter is guessed.
 
 end
+
+user_input = Guessing_Game.new
+p user_input.disguise_word("unicorn")
 
 
 # user interface
