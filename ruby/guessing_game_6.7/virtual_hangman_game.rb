@@ -18,7 +18,6 @@ class Guessing_Game
 		@disguised_word = disguised_word
 		@guess_count = 0
 		@guessed_letters = []
-		@is_over = false
 	end
 	
 # Create a method that will take the word_submit and display it as a string of “_” vs the word 
@@ -66,31 +65,49 @@ class Guessing_Game
 
 end
 
-user_input = Guessing_Game.new
-p user_input.real_word = "unicorn"
-p user_input.disguise_word("unicorn")
-p user_input.detect_letter("n")
-p user_input.detect_letter('n')
+#test driver code 
+# user_input = Guessing_Game.new
+# p user_input.real_word = "unicorn"
+# p user_input.disguise_word("unicorn")
+# p user_input.detect_letter("n")
+# p user_input.detect_letter('n')
 
 
 # user interface
 
-# # Display a welcome message
-# puts "Hello and welcome to virtual hangman!"
-# # initialize game
-# user_input = Guessing_Game.new
-# # Ask player one for the word they want to submit
-# puts "Player One - Give us the word you'd like Player Two to guess."
-# # set their input equal to the word_submit and downcase all letters
-# user_input.real_word = gets.chomp.downcase
-#  p user_input.real_word
-
-
-# puts "Ok Player Two, it's your turn to guess! Can guess more than once, but choose your guesses carefully.."
-# p user_input.disguise_word(user_input.word_submit)
+# Display a welcome message
+puts "Hello and welcome to virtual hangman!"
+# initialize game
+user_input = Guessing_Game.new
+# Ask player one for the word they want to submit
+puts "Player One - Give us the word you'd like Player Two to guess."
+# set their input equal to the real_word and downcase all letters
+user_input.real_word = gets.chomp.downcase
+# p user_input.real_word
+puts "Ok Player Two, unlock the letters in the word below! You can guess more than once, but choose your guesses carefully.."
+p user_input.disguise_word(user_input.real_word)
 # run through their guesses WHILE the guess count is less than the length
+while user_input.guess_count < user_input.real_word.length do 
+	
+	puts "Make your guess!"
+	guess = gets.chomp
+	p user_input.detect_letter(guess)
+
+	if user_input.disguised_word == user_input.real_word
+		puts "Congrats, you’ve outsmarted your opponent!"
+		break
+	end
+
+end
+
+if user_input.disguised_word != user_input.real_word
+	puts "Too bad, you weren’t quick-witted enough this time around :("
+end
 # display the new guess string each time so player two can see if they have guessed correctly or not
 # At the end of their guesses, IF the original word_submit string is empty, then run a message 
 # make message “Congrats, you’ve outsmarted your opponent!”
 # OTHERWISE have it display a taunting message about them not being able to guess the word. 
 # make message “Too bad, you weren’t quick-witted enough this time around :(“
+
+
+
