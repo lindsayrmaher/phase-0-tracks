@@ -1,28 +1,35 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Joey Connors ].
+# We spent [1.5] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# Require is used for importing modules
+# Require relative works within the current directory or a different directory in a separate path. And references an actual file. Vs a module
 require_relative 'state_data'
 
 class VirusPredictor
 
+  # runs whenever an instance is created
+  # defines instance vars for each instance
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+  # this calls predicted_deaths and speed_of_spread methods and applies the vars from each instance
   def virus_effects
     predicted_deaths
     speed_of_spread
   end
 
+  # makes it so that other methods cannot be called by an explicit receiver
+  # can only be called inside the class
   private
 
+  # runs conditions stating if the other value in the hash is less than the number then equate the number of deaths to a certain percentage of the population
+  # prints the number of deaths for a state.
   def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +48,8 @@ class VirusPredictor
 
   end
 
+  # based on the population density number the speed of virus spread will increase.
+  # then prints information regarding speed of spread in months.
   def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -91,3 +100,31 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The containing hash uses strings and hash rockets, the inner hashes use symbols.
+# The difference here is one in how it's written and two how the info is stored. A symbol is stored in a specific place and will always be stored there in your computer.
+# The string is randomly stored.
+
+# What does require_relative do? How is it different from require?
+
+# Using require_relative references a file that you need use information from in whatever file you're calling it on.
+# It is different from require in that generally you would use require to reference a particular module. By requiring a specific module, you can access the methods within it on your file.
+
+# What are some ways to iterate through a hash?
+
+#There are quite a few options to iterate through a hash
+#You could use the .each or .each_pair methods which run through each key value pair
+# You could run each_key or each_value, although I don't think in this particular example each value would be very efficient since it would have to then go through the inner arrays as well. 
+# you could also create a loop that runs the length of the hash.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+#what we noticed was that since we were working inside the class, we didn't need to set parameters on the methods in order to call the variables inside. 
+
+# What concept did you most solidify in this challenge?
+
+#This challenge solidified the concept of how things interact inside and outside of a class, as well as using the instance variables in other methods. This actually made me feel a lot better about my understanding after working through the end of week 6. 
+
+
+
