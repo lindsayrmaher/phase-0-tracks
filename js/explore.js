@@ -7,4 +7,11 @@
 
 function reverseString(inputString) {
 	var newString = "";
+// expect this to go through the inputted string starting at the end of the string, and put the letters in the new variable
+	for (var i = inputString.length - 1; i >= 0; i--) {
+		newString += inputString[i];
+	}
+	// expect the return to be the new string
+	return newString;
 }
+
