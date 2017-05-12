@@ -15,3 +15,12 @@ function reverseString(inputString) {
 	return newString;
 }
 
+console.log(reverseString("hello world!"));
+
+// printing the variable if it's true
+var firstName1 = "lindsay"
+var firstName2 = "kiran"
+
+if (firstName1 != firstName2) {
+	console.log(firstName1 + " and " + firstName2 + " are friends!");
+} 
