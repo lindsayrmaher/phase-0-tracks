@@ -9,14 +9,22 @@
 // OTHERWISE keep it in the same position
 // Once all the words have been sorted, return the last word of the array (should be longest)
 function bubbleSort(word_array) {
-	var i;
-	var n;
-		while(word_array.length--) {
-			for(i = 0, n = 1; i < word_array.length; ++i, ++n)
+	var i, n, length;
+		length= word_array.length; while(length--) {
+			for(i = 0, n = 1; i < length; ++i, ++n)
 				if(word_array[i].length > word_array[n].length) 
 					{place_holder = word_array[i]; word_array[i]=word_array[n]; word_array[n] = place_holder;}
 
 		}
-		return word_array[-1];
+		// console.log(word_array)
+		return word_array[word_array.length-1];
 }
 
+var example_words = ["blue", "red", "green", "yellow"];
+var more_examples = ["sparrow", "little finger", "snow", "barathean", "song of fire and ice"]
+
+// console.log(example_words[1].length)
+
+console.log(bubbleSort(example_words))
+
+console.log(bubbleSort(more_examples))
