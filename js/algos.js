@@ -20,6 +20,12 @@ function bubbleSort(word_array) {
 		return word_array[word_array.length-1];
 }
 
+// Second Drill
+
+
+
+// Driver Code
+
 var example_words = ["blue", "red", "green", "yellow"];
 var more_examples = ["sparrow", "little finger", "snow", "barathean", "song of fire and ice"]
 
