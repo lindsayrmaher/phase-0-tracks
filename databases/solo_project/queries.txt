@@ -1,0 +1,15 @@
+Query 1
+
+sqlite> SELECT * FROM employee_info;
+1|Cindy Lauper|55|false|5
+2|James Franco|42|true|2
+3|Alan Rickman|25|true|1
+4|Mindy Kaling|33|true|3
+5|Rupi Kaur|27|false|4
+6|Christian Ortiz|36|true|5
+7|Lindsay Maher|23|false|4
+8|Skye Witt|25|true|3
+9|Dan Wagner|32|false|2
+10|Sarah Duffy|29|true|1
+
+Query 2
