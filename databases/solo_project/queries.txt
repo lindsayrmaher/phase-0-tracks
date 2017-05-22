@@ -1,0 +1,69 @@
+Query 1
+sqlite> SELECT * FROM employee_info;
+1|Cindy Lauper|55|false|5
+2|James Franco|42|true|2
+3|Alan Rickman|25|true|1
+4|Mindy Kaling|33|true|3
+5|Rupi Kaur|27|false|4
+6|Christian Ortiz|36|true|5
+7|Lindsay Maher|23|false|4
+8|Skye Witt|25|true|3
+9|Dan Wagner|32|false|2
+10|Sarah Duffy|29|true|1
+
+Query 2
+sqlite> UPDATE employee_info SET good_employee="false" WHERE name="Christian Ortiz";
+sqlite> SELECT * FROM employee_info;
+1|Cindy Lauper|55|false|5
+2|James Franco|42|true|2
+3|Alan Rickman|25|true|1
+4|Mindy Kaling|33|true|3
+5|Rupi Kaur|27|false|4
+6|Christian Ortiz|36|false|5
+7|Lindsay Maher|23|false|4
+8|Skye Witt|25|true|3
+9|Dan Wagner|32|false|2
+10|Sarah Duffy|29|true|1
+
+Query 3 
+sqlite> SELECT * FROM employee_info, departments WHERE employee_info.dept_id = departments.id;
+1|Cindy Lauper|55|false|5|5|I.T.
+2|James Franco|42|true|2|2|Analytics
+3|Alan Rickman|25|true|1|1|Human Resources
+4|Mindy Kaling|33|true|3|3|Client Services
+5|Rupi Kaur|27|false|4|4|Creative
+6|Christian Ortiz|36|false|5|5|I.T.
+7|Lindsay Maher|23|false|4|4|Creative
+8|Skye Witt|25|true|3|3|Client Services
+9|Dan Wagner|32|false|2|2|Analytics
+10|Sarah Duffy|29|true|1|1|Human Resources
+
+Query 4
+sqlite> SELECT employee_info.name, departments.dept_name FROM employee_info JOIN departments ON employee_info.dept_id = departments.id;
+Cindy Lauper|I.T.
+James Franco|Analytics
+Alan Rickman|Human Resources
+Mindy Kaling|Client Services
+Rupi Kaur|Creative
+Christian Ortiz|I.T.
+Lindsay Maher|Creative
+Skye Witt|Client Services
+Dan Wagner|Analytics
+Sarah Duffy|Human Resources
+
+Query 5 
+sqlite> DELETE FROM employee_info WHERE good_employee = "false";
+sqlite> SELECT * FROM employee_info;
+2|James Franco|42|true|2
+3|Alan Rickman|25|true|1
+4|Mindy Kaling|33|true|3
+8|Skye Witt|25|true|3
+10|Sarah Duffy|29|true|1
+
+Joins Queries
+sqlite> SELECT * FROM employee_info LEFT JOIN departments ON employee_info.dept_id = departments.id;
+2|James Franco|42|true|2|2|Analytics
+3|Alan Rickman|25|true|1|1|Human Resources
+4|Mindy Kaling|33|true|3|3|Client Services
+8|Skye Witt|25|true|3|3|Client Services
+10|Sarah Duffy|29|true|1|1|Human Resources
