@@ -21,3 +21,12 @@ var parent = main_heading.parentNode;
 parent.insertBefore(sub_heading, main_heading);
 
 // main_heading.appendChild(sub_heading);
+
+// add event listener
+
+function addBikeBorder(event) {
+	event.target.style.border = "5px solid black";
+}
+
+var bike_photo = document.getElementById('bike_photo');
+bike_photo.addEventListener('click', addBikeBorder);
