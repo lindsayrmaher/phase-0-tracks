@@ -44,6 +44,13 @@ get '/great_job' do
       
 end
 
+#add two parameters together
+
+get '/adding/:first_var/plus/:second_var' do
+  solution = params[:first_var].to_i + params[:second_var].to_i
+  solution.to_s
+end
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
