@@ -23,6 +23,34 @@ get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
+#write a GET route with route parameters
+#to display an address
+
+get '/address/:address' do
+  address = params[:address]
+  "Your address is #{address} Maple Street!"
+end
+
+# write a basic GET route
+# add a query parameter for name
+# say great job with conditions
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job!"
+  end
+      
+end
+
+#add two parameters together
+
+get '/adding/:first_var/plus/:second_var' do
+  solution = params[:first_var].to_i + params[:second_var].to_i
+  solution.to_s
+end
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
